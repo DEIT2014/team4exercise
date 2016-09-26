@@ -183,7 +183,64 @@ final constantMap = const {
 // constantMap[2] = 'Helium'; // Uncommenting this causes an error.
 ```
 ###**7. querySelector（）函数的详细API解释**
+**概述:**  返回第一个
+
+**语法:**
+```
+element = document.querySelector(selectors);
+```
+其中
+* element 是一个 element 对象（DOM 元素）。
+* selectors 是一个字符串，包含一个或是多个 CSS 选择器 ，多个则以逗号分隔。
+
+**例子**
+这个例子中，会返回当前文档中第一个类名为 "myclass" 的元素：
+```
+var el = document.querySelector(".myclass");
+```
+**例子：一个强大的选择方式**
+这个例子中，你将感受到selectors的强大。例子将返回<div class="user-panel main">标签中的<input name="login"/>标签。
+```
+<div class="user-panel main">
+    <input name="login"/> //这个标签将被返回
+</div>
+
+<script>
+    var el = document.querySelector("div.user-panel.main input[name=login]");
+</script>
+``` 
+**注意**
+*如果没有找到匹配元素，则返回 null，否则找到多个匹配元素，则返回第一个匹配到的元素。
+
+*如果选择器是一个 ID，并且这个 ID 在文档中错误地使用了多次，那么返回第一个匹配该 ID 的元素。
+
+*如果指定的选择器不合法，则抛出 SYNTAX_ERR 异常。
+
+*querySelector()在 Selectors API 中引入。
+
+*传递给 querySelector 的字符串参数必须符合 CSS 语法。
+
+*CSS 伪类不会返回任何元素，见 Selectors API 中的相关规定。
+
+*如果要匹配的ID或选择器不符合 CSS 语法（比如不恰当地使用了冒号或者空格），你必须用反斜杠将这些字符转义。由于 JavaScript 中，反斜杠是转义字符，所以当你输入一个文本串时，你必须将它转义两次（一次是为 JavaScript 字符串转义，另一次是为 querySelector 转义）：
+```
+<div id="foo\bar"></div>
+<div id="foo:bar"></div>
+
+<script>
+  console.log('#foo\bar')               // "#fooar"
+  document.querySelector('#foo\bar')    // 不匹配任何元素
+
+  console.log('#foo\\bar')              // "#foo\bar"
+  console.log('#foo\\\\bar')            // "#foo\\bar"
+  document.querySelector('#foo\\\\bar') // 匹配第一个div
+
+  document.querySelector('#foo:bar')    // 不匹配任何元素
+  document.querySelector('#foo\\:bar')  // 匹配第二个div
+</script>
+```
 ###**8. 详细解释dart如何操作html的文档**
+http://www.dartlang.cc/docs/tutorials/connect-dart-html/
 ###**9. dart web app 应用程序组织结构的解释部分**
 ###**10. dart可用的各种工具的解释部分**
 ###**11. 指引你到其他社区社区寻求dart相关问题帮助的解释部分**
