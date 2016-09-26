@@ -102,27 +102,9 @@ var s ='string interpolation';
       print(fullString);   
       sb.clear();  
 ```
-  
-  
-
-
-
-
-
 ###**3. dart函数定义和使用方法**
 ###**4. dart中数组定义和使用方法**
 ###**5. dart中列表定义和使用方法**
-###**6. dart中 Map定义和使用方法**
-###**7. querySelector（）函数的详细API解释**
-###**8. 详细解释dart如何操作html的文档**
-###**9. dart web app 应用程序组织结构的解释部分**
-###**10. dart可用的各种工具的解释部分**
-###**11. 指引你到其他社区社区寻求dart相关问题帮助的解释部分**
-###**12. 从web storm软件菜单找出webstrom 中dart开发的帮助文档**
-
-
-5. dart中列表定义和使用方法
-
 Dart 语言中内置了常用的 List ，List 是 Collection 的子类型，另外 Queue 和 Set 也是 Collection 的子类型 。
 一个简单的list：
 ```dart
@@ -142,9 +124,7 @@ assert(list[1] == 1);
 var constantList = const [1, 2, 3];
 // constantList[1] = 1; // Uncommenting this causes an error.
 ```
-
-6. dart中 Map定义和使用方法
-
+###**6. dart中 Map定义和使用方法**
 地图是包含指针和值得一个对象。
 一个简单的地图：
 ```dart
@@ -202,21 +182,15 @@ final constantMap = const {
 };
 // constantMap[2] = 'Helium'; // Uncommenting this causes an error.
 ```
-
-7. querySelector（）函数的详细API解释
-
-8. 详细解释dart如何操作html的文档
-
-9. dart web app 应用程序组织结构的解释部分
-
-10. dart可用的各种工具的解释部分
-
-11. 指引你到其他社区社区寻求dart相关问题帮助的解释部分
-
+###**7. querySelector（）函数的详细API解释**
+###**8. 详细解释dart如何操作html的文档**
+###**9. dart web app 应用程序组织结构的解释部分**
+###**10. dart可用的各种工具的解释部分**
+###**11. 指引你到其他社区社区寻求dart相关问题帮助的解释部分**
 官方网站：www.dartlang.org
 其他学习资源：dart语言入门（附视频） http://dart.hanguokai.com/
 Dart语言中文社区（可与他人交流学习）http://www.cndartlang.com/ 
-
-12. 从web storm软件菜单找出webstrom 中dart开发的帮助文档
-
+###**12. 从web storm软件菜单找出webstrom 中dart开发的帮助文档**
 https://confluence.jetbrains.com/display/WI/Getting+started+with+Dart
+
+
