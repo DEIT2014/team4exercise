@@ -93,9 +93,11 @@ final constantMap = const {
 10. dart可用的各种工具的解释部分
 
 11. 指引你到其他社区社区寻求dart相关问题帮助的解释部分
+
 官方网站：www.dartlang.org
 其他学习资源：dart语言入门（附视频） http://dart.hanguokai.com/
 Dart语言中文社区（可与他人交流学习）http://www.cndartlang.com/ 
 
 12. 从web storm软件菜单找出webstrom 中dart开发的帮助文档
+
 https://confluence.jetbrains.com/display/WI/Getting+started+with+Dart
