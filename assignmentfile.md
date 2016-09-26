@@ -7,7 +7,8 @@
 4. dart中数组定义和使用方法
 
 5. dart中列表定义和使用方法
- Dart 语言中内置了常用的 List ，List 是 Collection 的子类型，另外 Queue 和 Set 也是 Collection 的子类型 。
+
+Dart 语言中内置了常用的 List ，List 是 Collection 的子类型，另外 Queue 和 Set 也是 Collection 的子类型 。
 一个简单的list：
 ```dart
 var list = [1, 2, 3];
@@ -26,6 +27,7 @@ assert(list[1] == 1);
 var constantList = const [1, 2, 3];
 // constantList[1] = 1; // Uncommenting this causes an error.
 ```
+
 6. dart中 Map定义和使用方法
 地图是包含指针和值得一个对象。
 一个简单的地图：
@@ -84,6 +86,7 @@ final constantMap = const {
 };
 // constantMap[2] = 'Helium'; // Uncommenting this causes an error.
 ```
+
 7. querySelector（）函数的详细API解释
 
 8. 详细解释dart如何操作html的文档
