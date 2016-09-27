@@ -103,7 +103,65 @@ var s ='string interpolation';
       sb.clear();  
 ```
 ###**3. dart函数定义和使用方法**
+dart是一个真正的面向对象的语言，所以即使是函数也有对象、类型和功能。这意味着函数可以被分配给变量或作为参数传递给其他函数。你也可以调用一个类的实例，好像它是一个函数。详情见可调用的类。
+、、、
+bool isNoble(int atomicNumber) {
+  return _nobleGases[atomicNumber] != null;
+}
+虽然有效的dart为公共的函数库推荐了类型注释，但如果省略了类型，函数仍然有效isNoble(atomicNumber) {
+  return _nobleGases[atomicNumber] != null;
+}
+对于只包含一个表达式的函数，您可以使用速记语法：
+bool isNoble(int atomicNumber) => _nobleGases[atomicNumber] != null;
+The => expr syntax 是r { return expr; }.的缩写
+
 ###**4. dart中数组定义和使用方法**
+在Dart中数组也叫列表list.
+
+定义一个数组：
+
+var list = [1,2,3];  
+  操作数组：
+
+var list = [1,2,3];  
+print(list.length); // the # of elements: 3  
+print(list[1]);     // the second item: 2  
+  给数组添加元素：
+
+var list = [1,2,3];  
+list.add(4);  
+  从数组中删除一定范围内的元素：
+
+var list = [1,2,3,4];  
+list.removeRange(2, 1); // remove the third element  
+  创建固定长度的数组：
+
+var list = new List(3); //fixed-size list (full of null values)  
+ 注意：固定长度的数组不能调用add,removeRange等方法改变其大小。
+
+可以使用for, for...in, 或forEach()几种方式遍历数组，
+
+使用for:
+var list = [1,2,3];  
+for (var x = 0; x < list.length; x++) {  
+  print('$x: ${list[x]}');  
+}  
+  for...in:
+
+var list = [1,2,3];  
+for (final x in list) {  
+  print(x);  
+}  
+  forEach():
+
+var list = [1,2,3]  
+void printElement(element) => print(element);  
+list.forEach(printElement);  
+  可更简洁的方式：
+var list = [1,2,3];  
+list.forEach((element) => print(element));  
+  list的父类是Collection,它提供了一系列操作集合的方法。
+
 ###**5. dart中列表定义和使用方法**
 Dart 语言中内置了常用的 List ，List 是 Collection 的子类型，另外 Queue 和 Set 也是 Collection 的子类型 。
 一个简单的list：
@@ -242,7 +300,38 @@ var el = document.querySelector(".myclass");
 ###**8. 详细解释dart如何操作html的文档**
 http://www.dartlang.cc/docs/tutorials/connect-dart-html/
 ###**9. dart web app 应用程序组织结构的解释部分**
+https://webdev.dartlang.org/codelabs/ng2/1-skeleton#--what-did-you-get
 ###**10. dart可用的各种工具的解释部分**
+*DartPad
+ DartPad是一个很好学习Dart语法，实验dart语言特征和核心库的方式
+ 体验Dart语言，无需在电脑上安装Dart开发环境，可以使用Google提供的Dart云编译服务——DartPad。DartPad是一个自由、开放的源码服务，帮助开发人员学习Dart语言，进入DartPad的源代码会被发送到谷歌云计算平台上运行，服务器会将源代码进行编译并处理成JavaScript返回给浏览器，编译产生的错误和警告也会返回
+ *IDES
+ 许多常用的IDE插件存在插件。如果你还没有一个喜欢的IDE，试试WebStorm，是dart语言支持下的。IDES 的全称是 Internet Demonstration and Evaluation System (互联网演示和评估系统)。IDES 是 SAP R/3 系统的一个演示版本，IDES 系统模拟了一个范例公司，该公司是一个在一些国家拥有分公司的国际集团。IDES 系统还包含了各种业务场景所需的应用数据。IDES 通过简单易懂的业务场景来演示 SAP R/3 系统的功能，这些业务流程都是为了反应现实生活中的业务需求而设置的。不过 IDES 的重点并不在于强调功能本身，而是在于业务流程以及业务流程之间的整合。
+ *SDKs
+软件开发工具包
+ *Command-line tools命令行工具
+ Pub package manager 包管理器
+ 管理dart包，便于用户安装、使用和分享库，命令行工具和其他。有些dart的技术如flutter可能不支持所有的pub命令。支持DART的软件开发包大体上支持pub，但是你也可以用命令行。(pub)
+ Static analyzer静态分析
+ 评估报告代码中的错误或警告，dart的IDE插件运用dart的分析引擎，也可以通过命令行运行分析器(dartanalyzer)
+ Static Analyzer是一个非常好的工具, 它可以帮助我们发现编译器警告不会提示的问题。
+ Static Analysis 优点：
+ 1、使用操作容易。
+ 2、能够在编码阶段，开发自行进行代码检查。早期发现代码隐患。
+ 3、直接分析源代码来发现程序中的错误，而不需要实际运行。
+ 4、自动检测objective-C程序中的BUG，发现内存泄露和其它问题。
+ 5、内存问题发现越早，解决的代价就越小。
+ 
+ Code formatter程序代码格式制作器
+ 支持dart的IDEs允许格式化代码，或者可以通过命令行来运行。 (dartfmt)
+ 
+ Tools for the Web
+ *Dartium
+ 用Dartium意味着在你准备在浏览器上测试前不用去Javascript上编译。
+ 不要用Dartium作为你的首要浏览器，也不要把Dartium散步给用户。
+ *Webstorm
+ *Command-line tools
+ 对于网站开发的命令行工具有：dart2js；dart2js；pub serve
 ###**11. 指引你到其他社区社区寻求dart相关问题帮助的解释部分**
 官方网站：www.dartlang.org
 其他学习资源：dart语言入门（附视频） http://dart.hanguokai.com/
